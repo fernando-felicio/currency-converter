@@ -2,6 +2,8 @@ package application;
 import java.util.Locale;
 import java.util.Scanner;
 
+import util.CurrencyConverter;
+
 
 public class Program {
 	
@@ -15,6 +17,10 @@ public class Program {
 		
 		System.out.println("How many dollars to buy?");
 		double dollarsToBuy = scanner.nextDouble();
+		
+		double result = CurrencyConverter.totalConvert(valueDollarToday, dollarsToBuy);
+		
+		System.out.printf("Amount to be paid in Reais (R$) is: %.2f%n", result);
 		
 		
 		scanner.close();
